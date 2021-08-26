@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import useSWR from 'swr';
 import fetcher from '../utils/fetcher';
 
@@ -6,22 +6,12 @@ const Subscribe = () => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  const [issues, setIssues] = useState([]);
 
   const { data } = useSWR('/api/subscribers', fetcher);
   const subscriberCount = data?.count;
   
-
-  useEffect(async ()=> {
-    const resIssues = await fetch("/api/issues", {
-      headers: { 'Content-Type': 'application/json' },
-      method: "GET",
-    });
-
-    const { issues } = await resIssues.json();
-    console.log(issues);
-    setIssues(issues);
-  }, []);
+  const { data: issueData } = useSWR('/api/issues', fetcher);
+  const issues = issueData?.issues;
 
   const subscribeMe = async (event) => {
     event.preventDefault();
@@ -72,7 +62,7 @@ const Subscribe = () => {
           ? <span className="flex items-center text-sm font-bold text-green-700 dark:text-green-400">{success}</span> 
           : <span className="flex items-center text-sm font-bold text-red-800 dark:text-red-400">{error}</span>}
         <p className="text-md text-gray-800 dark:text-gray-200">
-          { subscriberCount } subscribers . {issues.length} {issues.length > 1 ? 'issues' : 'issue'}
+          { subscriberCount } subscribers . {issues && issues.length} {issues && issues.length > 1 ? 'issues' : 'issue'}
         </p>
         <p className="text-sm  text-center p-3 text-gray-800 dark:text-gray-200">
           Well, you can subscribe to my upcoming Newsletter for real. Just give a valid email id above and verify 😀.
@@ -84,7 +74,7 @@ const Subscribe = () => {
         </h3>
         <div className="flex flex-col bg-gray-200 p-4 underline">
           <ul>
-            {issues
+            {issues && issues
               .sort(
                 (a, b) =>
                   Number(new Date(b.publishedAt)) -

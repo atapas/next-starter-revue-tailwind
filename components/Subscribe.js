@@ -37,12 +37,8 @@ const Subscribe = () => {
     });
 
     const { error, message } = await res.json();
-
-    if (error) {
-      setError(error);
-    } else {
-      setSuccess(message);
-    }
+    setError(error);
+    setSuccess(message);
   };
 
   const changeEmail = (event) => {

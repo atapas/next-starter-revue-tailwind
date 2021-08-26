@@ -15,7 +15,7 @@ export default async function handler(req, res) {
             `https://www.getrevue.co/api/v2/subscribers`,
             {
                 method: 'POST',
-                body: JSON.stringify({email: email, double_opt_in: false}),
+                body: JSON.stringify({email: email}),
                 headers: {
                     'Authorization': `Token ${API_KEY}`,
                     'Content-Type': 'application/json'
@@ -31,9 +31,10 @@ export default async function handler(req, res) {
             console.log(message.error.email[0]);
             return res.status(400).json({error: message.error.email[0]});
         }
+
         // Send a JSON response
         res.status(201).json({
-            message: `Great, ${email} You are in.`,
+            message: `Hey, ${email}, Please check your email and verify it. Can't wait to get you boarded.`,
             error: ''
         });
     } catch (err) {

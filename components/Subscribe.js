@@ -1,22 +1,18 @@
 import { useState, useEffect } from 'react';
+import useSWR from 'swr';
+import fetcher from '../utils/fetcher';
 
 const Subscribe = () => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  const [subscriberCount, setSubscriberCount] = useState();
   const [issues, setIssues] = useState([]);
 
+  const { data } = useSWR('/api/subscribers', fetcher);
+  const subscriberCount = data?.count;
+  
+
   useEffect(async ()=> {
-    const res = await fetch("/api/subscribers", {
-      headers: { 'Content-Type': 'application/json' },
-      method: "GET",
-    });
-
-    const { count } = await res.json();
-    console.log(count);
-    setSubscriberCount(count);
-
     const resIssues = await fetch("/api/issues", {
       headers: { 'Content-Type': 'application/json' },
       method: "GET",

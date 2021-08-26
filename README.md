@@ -3,7 +3,7 @@
 A Newsletter Service built with Twitter Revue, Next.js Serverless APIs, and Tailwindcss.
 
 
-![alt text](https://github.com/taylorbryant/next-starter-tailwind/blob/master/public/screenshot.png "Screenshot of Tailwind Next.js Starter homepage")
+![alt text](./public/screen.png "Screenshot of Tailwind Next.js Starter homepage")
 
  <div align="center">
  

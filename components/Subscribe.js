@@ -75,8 +75,11 @@ const Subscribe = () => {
         {success 
           ? <span className="flex items-center text-sm font-bold text-green-700 dark:text-green-400">{success}</span> 
           : <span className="flex items-center text-sm font-bold text-red-800 dark:text-red-400">{error}</span>}
-        <p className="text-sm text-gray-800 dark:text-gray-200">
+        <p className="text-md text-gray-800 dark:text-gray-200">
           { subscriberCount } subscribers . {issues.length} {issues.length > 1 ? 'issues' : 'issue'}
+        </p>
+        <p className="text-sm  text-center p-3 text-gray-800 dark:text-gray-200">
+          Well, you can subscribe to my upcoming Newsletter for real. Just give a valid email id above and verify 😀.
         </p>
       </div>
       <div>

@@ -1,4 +1,4 @@
-# Next.js Starter Tailwind
+#  next-starter-revue-tailwind
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 

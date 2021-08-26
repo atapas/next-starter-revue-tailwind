@@ -1,9 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Subscribe = () => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const [subscriberCount, setSubscriberCount] = useState();
+
+  useEffect(async ()=> {
+    const res = await fetch("/api/subscribers", {
+      headers: { 'Content-Type': 'application/json' },
+      method: "GET",
+    });
+
+    const { count } = await res.json();
+    console.log(count);
+    setSubscriberCount(count);
+  }, []);
 
   const subscribeMe = async (event) => {
     event.preventDefault();
@@ -57,7 +69,7 @@ const Subscribe = () => {
         ? <span className="flex items-center text-sm font-bold text-green-700 dark:text-green-400">{success}</span> 
         : <span className="flex items-center text-sm font-bold text-red-800 dark:text-red-400">{error}</span>}
       <p className="text-sm text-gray-800 dark:text-gray-200">
-        14 subscribers . 3 issues
+        { subscriberCount } subscribers . 3 issues
       </p>
     </div>
   );

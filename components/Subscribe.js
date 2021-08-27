@@ -34,12 +34,12 @@ const Subscribe = () => {
 
   return (
     <>  
-      <div className="border border-blue-200 rounded p-6 my-4 w-full bg-blue-50">
-        <p className="text-lg md:text-xl font-bold text-gray-900">
-          Subscribe to the newsletter
+      <div className="border border-gray-200 rounded p-6 my-4 w-full bg-gray-50">
+        <p className="text-gray-900 dark:text-gray-200 mb-6 text-lg md:text-xl">
+          Want to keep your brain engaged with great UI/UX learning content?
         </p>
-        <p className="my-1 text-gray-800">
-          Get emails from me about web development, content creation, and how lead a motivated life.
+        <p className="text-gray-800 dark:text-gray-400 mb-10 text-base">
+          Enter your email address and you'll be be added to my email newsletter, of which you can opt out any time.
         </p>
         <form className="relative my-4" onSubmit={subscribeMe}>
           <input
@@ -49,10 +49,10 @@ const Subscribe = () => {
             type="email"
             autoComplete="email"
             required
-            className="px-4 py-2 mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full border-gray-300 rounded-md bg-white text-gray-900"
+            className="py-4 px-0 text-md bg-transparent w-9/12 text-gray-900 border-b-2 border-gray-600 dark:border-gray-400 dark:text-white focus:border-brand focus-visible:outline-none"
           />
           <button
-            className="flex items-center justify-center absolute right-1 top-1 px-4 font-bold h-8 bg-gray-100 text-gray-900 rounded w-28"
+            className="flex justify-center px-5 py-4 mt-8 bg-green-600 text-white font-bold text-lg"
             type="submit"
           >
             Subscribe
@@ -61,7 +61,7 @@ const Subscribe = () => {
         {success 
           ? <span className="flex items-center text-sm font-bold text-green-700">{success}</span> 
           : <span className="flex items-center text-sm font-bold text-red-800">{error}</span>}
-        <p className="text-md text-gray-800">
+        <p className="text-xl text-gray-800 dark:text-gray-200">
           { subscriberCount } subscribers . {issues && issues.length} {issues && issues.length > 1 ? 'issues' : 'issue'}
         </p>
         <p className="text-sm  text-center p-3 text-gray-800">

@@ -5,10 +5,14 @@ A Newsletter Service built with Twitter Revue, Next.js Serverless APIs, and Tail
 
 ![alt text](./public/screen_latest.png "Screenshot of Tailwind Next.js Starter homepage")
 
- <div align="center">
- 
+<div align="center">
  <p>View demo <a href="https://next-starter-revue-tailwind.vercel.app/" target="_blank">here</a>.</p>
 </div>
+
+# Learn How To DO
+
+- A tutorial to follow: [Create a Newsletter app with Twitter Revue, Next.js API Routes, and Tailwindcss](https://blog.greenroots.info/create-newsletter-with-revue-nextjs-api-routes-tailwindcss)
+- Do you like a Video Tutorial instead? [Here it is on YouTube](https://youtu.be/XbtgjxWFssQ)
 
 ## Deploy
 
@@ -21,7 +25,7 @@ A Newsletter Service built with Twitter Revue, Next.js Serverless APIs, and Tail
 [MIT](https://github.com/atapas/next-starter-revue-tailwind/blob/master/LICENSE.md)
 
 ## How to use it
-- Sign up with Twitter Revue.
+- Sign up with [Twitter Revue](https://www.getrevue.co/).
 - Copy the API Key.
 - Create a `.env.local` file with an entry,
  ```bash

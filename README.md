@@ -1,7 +1,6 @@
 #  next-starter-revue-tailwind
 
-A Newsletter Service built with Twitter Revue, Next.js Serverless APIs, and Tailwindcss.
-
+Create a Newsletter APP with Twitter Revue, Next.js Serverless APIs, and Tailwind CSS. The Best way to get Newsletter on your website and portfolio. It is my side project to create a template(skeleton) for you to get started soon. Please fork/clone/use. Also check out the `How To` section below.
 
 ![alt text](./public/screen_latest.png "Screenshot of Tailwind Next.js Starter homepage")
 

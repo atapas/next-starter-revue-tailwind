@@ -1955,10 +1955,10 @@ postcss-gap-properties@^3.0.0:
   resolved "https://registry.yarnpkg.com/postcss-gap-properties/-/postcss-gap-properties-3.0.0.tgz#8941c400df902247603fd915c7dc81e1d7686b15"
   integrity sha512-QJOkz1epC/iCuOdhQPm3n9T+F25+P+MYJEEcs5xz/Q+020mc9c6ZRGJkzPJd8FS9hFmT9eEKFEx9PEDl+lH5og==
 
-postcss-hover-media-feature@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-hover-media-feature/-/postcss-hover-media-feature-1.0.1.tgz#e079f9362a9ce9f0c49e577f6b10c0c7e31b7b38"
-  integrity sha512-v0wdsjyHZFNQHps+EMSpx6gyMyZzY8LKz++VhvaYmDuPKrUazT2Ago7YZyoqmoXCXHkAy4hJEENRl6L39heGNg==
+postcss-hover-media-feature@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-hover-media-feature/-/postcss-hover-media-feature-1.0.2.tgz#7c2046ddee1521148660195864b014d6c1d13b3c"
+  integrity sha512-o5xDUqCQ4xtilWOcvo5LKYxFVSLWcBN0IlTqa0IJwAwHTd4pxKmX4c0fGIpgLQCcBB/+aFizt2NVWNGJWG4Izg==
   dependencies:
     postcss-selector-parser "^6.0.4"
 
